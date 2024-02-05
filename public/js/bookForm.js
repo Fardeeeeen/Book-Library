@@ -19,14 +19,17 @@ document.addEventListener('DOMContentLoaded', () => {
         const bookCoverDetails = await searchBookAndFetchCover(title);
 
         if (bookCoverDetails) {
-          const { coverImage, bookTitle } = bookCoverDetails;
+          const { coverImage, bookTitle, isbn } = bookCoverDetails;
 
-          // Update the cover image and book title in the DOM
+          // Update the cover image, book title, and ISBN in the DOM
           const coverElement = bookElement.querySelector('.cover');
           coverElement.src = coverImage;
 
           const bookTitleElement = bookElement.querySelector('.book-title');
           bookTitleElement.textContent = bookTitle;
+
+          const isbnElement = bookElement.querySelector('.isbn'); // Add this line
+          isbnElement.textContent = `ISBN: ${isbn || 'Not available'}`; // Add this line
 
           console.log('Updated cover for book:', bookTitle);
         } else {

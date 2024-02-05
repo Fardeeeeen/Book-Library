@@ -31,7 +31,8 @@ export const searchBookAndFetchCover = async (title) => {
       // Step 4: Display cover image and book title on the homepage
       return {
         coverImage: `data:image/jpeg;base64,${base64Image}`,
-        bookTitle: resultWithISBN.title
+        bookTitle: resultWithISBN.title,
+        isbn: isbn
       };
     } else {
       console.error('No result with valid ISBN found.');
