@@ -19,12 +19,14 @@
         <% } else { %>
         <img class="cover" src="/images/book.png" alt="Default Cover">
       <% } %>
-
+      <div class = "info"></div>
       <p class="book-title">Title: <%= book.title %></p>
       <p>By: <%= book.author %></p>
       <p>My Rating: <%= book.rating %></p>
       <p>ISBN: <%= book.isbn %></p>
-
+      <p>Summary: <%= book.summary %></p>
+      </div>
+      <a href="/books/notes/<%= book.id %>">My Notes</a>
       <div class = "edit-delete-buttons">
       <form method="PUT" action="/books/edit/<%= book.id %>">
         <button type="submit">Edit</button>
@@ -32,8 +34,9 @@
       <form method="POST" action="/books/delete/<%= book.id %>">
         <button type="submit">Delete</button>
       </form>
+      
       </div>
-      <a href="/books/notes/<%= book.id %>">My Notes</a>
+      
     </li>
   <% }); %>
 </ul>

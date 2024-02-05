@@ -102,7 +102,7 @@ a {
   padding: 20px;
   margin-bottom: 20px;
   overflow: hidden;
-  display: flex;
+  display: block;
   align-items: center;
 }
 
@@ -110,7 +110,7 @@ a {
   max-width: 200px;
   max-height: 300px;
   margin-right: 20px;
-  float: right; /* Align the image to the right */
+  float: left; /* Align the image to the right */
 }
 
 .book-details {
@@ -118,11 +118,11 @@ a {
 }
 
 .edit-delete-buttons {
-  display: flex;
-  gap: 10px;
-  padding: 5px 10px; /* Smaller padding for buttons */
-  font-size: 14px; /* Smaller font size */
-  margin-left: 350px;
+  display: inline-flex;
+  gap: 15px;
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-left: 1000px;
 }
 
 .add-book-link {
