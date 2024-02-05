@@ -1,0 +1,22 @@
+<!-- views/notebook.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Notes</title>
+</head>
+<body>
+<%- include('partials/header') %>
+
+  <h3>Notebook</h3>
+  <ul>
+    <% notes.forEach(note => { %>
+      <li class = "notebook">
+        <p><strong>Book Title:</strong> <%= note.title %></p>
+        <p><strong>Note:</strong> <%= note.notes %></p>
+      </li>
+    <% }); %>
+  </ul>
+</body>
+</html>

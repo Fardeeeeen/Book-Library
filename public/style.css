@@ -1,0 +1,150 @@
+/* public/style.css */
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav {
+  background-color: #444;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 1em;
+  text-decoration: none;
+}
+
+main {
+  padding: 2em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+p{
+  margin-left: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin: auto;
+}
+
+label {
+  margin-bottom: 0.5em;
+}
+
+input,
+button {
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+button {
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #555;
+}
+
+.container {
+  padding: 0px;
+  max-width: 100%;
+}
+
+h3{
+  margin: 20px;
+}
+
+a:hover {
+  color: black;
+}
+
+a.nav-link:hover {
+  color: #8d4d75;
+}
+
+a.nav-link {
+  color: #f4f4f4;
+}
+
+a {
+  color: #8d4d75;
+}
+
+.book-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.cover {
+  max-width: 200px;
+  max-height: 300px;
+  margin-right: 20px;
+  float: right; /* Align the image to the right */
+}
+
+.book-details {
+  flex-grow: 1;
+}
+
+.edit-delete-buttons {
+  display: flex;
+  gap: 10px;
+  padding: 5px 10px; /* Smaller padding for buttons */
+  font-size: 14px; /* Smaller font size */
+  margin-left: 350px;
+}
+
+.add-book-link {
+  display: inline-block;
+  padding: 15px 30px; /* Larger padding for the button */
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  margin: 20px auto; 
+  text-decoration: none;
+}
+.add-book-link:hover {
+  text-decoration: none;
+}
+
+.notebook {
+  border: 2px solid #ddd;
+  padding: 25px;
+  margin: 20px 20px;
+}
+a.add-book-link {
+  margin-left: 700px;
+}
