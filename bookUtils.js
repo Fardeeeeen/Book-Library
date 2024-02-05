@@ -20,7 +20,7 @@ export const searchBookAndFetchCover = async (title) => {
     if (resultWithISBN) {
       // Extract the ISBN from the result
       const isbn = extractISBN(resultWithISBN);
-
+      console.log(isbn);
       // Step 3: Fetch the cover image using the extracted ISBN
       const coverImageUrl = `https://covers.openlibrary.org/b/isbn/${isbn}-M.jpg`; // Use 'S', 'M', or 'L' for small, medium, or large size
 
