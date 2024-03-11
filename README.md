@@ -91,7 +91,7 @@ This detailed process outlines how the application searches for books, fetches t
 ### 🏃‍♂️ Running the Project
 1. Clone the repository:
     ```bash
-    git clone https://github.com/Fardeeeeen/book-library.git
+    git clone https://github.com/Fardeeeeen/Book-Library.git
     cd book-library
     ```
 2. Install dependencies:
