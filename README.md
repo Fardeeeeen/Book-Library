@@ -135,7 +135,6 @@ Images:
 <img src = "https://github.com/Fardeeeeen/Book-Library/blob/main/lib%203.png" alt = "pages" />
 <img src = "https://github.com/Fardeeeeen/Book-Library/blob/main/lib%204.png" alt = "pages" />
 <img src = "https://github.com/Fardeeeeen/Book-Library/blob/main/lib%205.png" alt = "pages" />
-<img src = "https://github.com/Fardeeeeen/Book-Library/blob/main/lib%206.png" alt = "pages" />
 <img src = "https://github.com/Fardeeeeen/Book-Library/blob/main/lib%207.png" alt = "pages" />
 
 ### 📧 Contact Information
