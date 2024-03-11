@@ -18,7 +18,7 @@ The Book Library is a web application designed to help users manage their book c
 ### 🔄 Process
 The project follows a modular approach with Node.js and Express.js for the server-side functionality. PostgreSQL is used as the database to store book information. The integration with the Open Library Covers API allows fetching cover images for books. The frontend is built using HTML, CSS, and EJS templating to render dynamic content. The cover image generation process involves searching for the book and fetching the cover image using the ISBN code obtained from the search results. Continuous testing and debugging were conducted throughout the development process to ensure the application's functionality and stability :-
 
-### 🔄 Detailed Process of Searching and Fetching Book Cover Image
+<strong>Detailed Process of Searching and Fetching Book Cover Image </strong>
 
 The process of searching for a book and fetching its cover image involves multiple steps, including querying the Open Library API, extracting relevant data, and updating the DOM with the fetched information. Here's a breakdown of how this functionality is achieved:
 
