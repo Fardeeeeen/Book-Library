@@ -1,0 +1,34 @@
+<!-- views/book-form.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= formTitle %> Book</title>
+</head>
+<body>
+<%- include('partials/header') %>
+  <h3><%= formTitle %> Book</h3>
+
+  <div class= "bform">
+  <form method="POST" action="<%= formAction %>">
+    <!-- Include a hidden input for the book ID -->
+    <input type="hidden" name="bookId" value="<%= book ? book.id : '' %>">
+
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" value="<%= book ? book.title : '' %>" required>
+
+    <label for="author">Author:</label>
+    <input type="text" id="author" name="author" value="<%= book ? book.author : '' %>" required>
+
+    <label for="rating">Rating:</label>
+    <input type="number" id="rating" name="rating" value="<%= book ? book.rating : '' %>" required>
+
+    <button type="submit">Submit</button>
+  </form>
+
+</div>
+
+</body>
+</html>

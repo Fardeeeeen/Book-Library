@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+ <%- include('partials/header') %>
+
+
+ <ul>
+  <% listItems.forEach(book => { %>
+    <li class="book-item">
+      <!-- Display cover image if available -->
+      <% if (book.coverImageUrl) { %>
+        <img class="cover" src="<%= book.coverImageUrl %>" alt="<%= book.title %> Cover">
+        <% } else { %>
+        <img class="cover" src="/images/book.png" alt="Default Cover">
+      <% } %>
+      <div class = "info"></div>
+      <p class="book-title">Title: <%= book.title %></p>
+      <p>By: <%= book.author %></p>
+      <p>My Rating: <%= book.rating %></p>
+      <p class="isbn">ISBN: <%= book.isbn ? book.isbn : 'Not available' %></p>
+      <p>Summary: <%= book.summary %></p>
+      <p>Notes: <%= book.notes %></p>
+      </div>
+      <a href="/books/notes/<%= book.id %>">Edit Notes</a>
+      <div class = "edit-delete-buttons">
+      <form method="PUT" action="/books/edit/<%= book.id %>">
+        <button type="submit">Edit</button>
+      </form>
+      <form method="POST" action="/books/delete/<%= book.id %>">
+        <button type="submit">Delete</button>
+      </form>
+
+      
+    </li>
+  <% }); %>
+</ul>
+  <a class="add-book-link" href="/books/add">Add a Book</a>
+
+</div>
+
+<footer>
+<%- include('partials/footer') %>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script type="module" src="/bookUtils.js"></script>
+<script type="module" src="/js/bookForm.js"></script>
+
+
+
+
+</body>
+
+</html>
+
