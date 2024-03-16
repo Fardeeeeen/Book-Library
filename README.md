@@ -1,6 +1,6 @@
 ## 📚 Book Library
 
-The Book Library is a web application designed to help users manage their book collections effectively. It allows users to view, add, edit, and delete books from their library. The application integrates with the Open Library Covers API to fetch book covers and provides a seamless experience for users to interact with their library.
+ The Book Library is a web application designed to help users manage their book collections effectively. It allows users to view, add, edit, and delete books from their library. Users can also add notes, summaries, and ratings for each book, enhancing their reading experience and organization. The application integrates with the Open Library Covers API to fetch book covers and provides a seamless experience for users to interact with their library.
 
 ### 🛠️ Tech Stack
 - **Server-Side**: Node.js with Express.js
