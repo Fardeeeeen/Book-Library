@@ -8,13 +8,11 @@ let sequelize;
 if (process.env.DB_URL) {
   sequelize = new Sequelize(process.env.DB_URL, {
     dialect: 'postgres',
-    dialectOptions: {
-      ssl: process.env.NODE_ENV === 'production', // Enable SSL for production environment
-    },
+    ssl: true,
   });
 } else {
   console.error("DB_URL is not available. Please check your environment configuration.");
-  process.exit(1); 
+  process.exit(1); // Exit the application if DB_URL is not available
 }
 
 // Define the Book model
