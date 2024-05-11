@@ -1,0 +1,295 @@
+html {
+  height: 100%;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('/images/bookshelve.avif');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  background: hsla(205, 46%, 10%, 1);
+    background: linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1);
+
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+
+footer {
+  background: hsla(205, 46%, 10%, 1);
+    background: linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+    background: -moz-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+    background: -webkit-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1);
+  color: white;
+  text-align: center;
+  margin-top: auto;
+  height:100px
+}
+
+nav {
+  background-color: #444;
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 1em;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+main {
+  padding: 2em;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+p{
+  margin-left: 15px;
+  color: beige;
+  font-weight: bold;
+}
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+textarea {
+  height: 200px;
+  border-radius: 10px;
+}
+
+label {
+  margin-bottom: 0.5em;
+  color: beige;
+}
+
+input,
+button {
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+button {
+  cursor: pointer;
+  background-color: rgba(0, 12, 27, 0.7);
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #000c1b;
+}
+
+.container {
+  padding: 0px;
+  max-width: 100%;
+}
+
+.main{
+   height:100% ;
+}
+
+.main h1{
+  font-size: 3rem;
+  font-weight: bold;
+  color:#000c1b
+}
+
+.main p{
+  font-size: 1.5rem;
+  color: #000c1b
+}
+
+h1 {
+  font-size: 1.5rem;
+}
+
+
+h3{
+  color:beige;
+    margin: 30px 50px 10px 50px;
+}
+
+a:hover {
+  color: #ff0d0dce;
+  text-decoration: none;
+}
+
+a.nav-link:hover {
+color: #065ba0;
+}
+
+a.nav-link {
+  color: #f4f4f4;
+}
+
+a {
+  color: #d4ebffcb;
+  font-weight:800;
+}
+
+.book-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  display: block;
+  align-items: center;
+  background-color: rgba(51, 51, 51, 0.5);
+  border-radius: 30px;
+  
+}
+
+.cover {
+  max-width: 200px;
+  max-height: 300px;
+  margin-right: 20px;
+  float: left; 
+}
+
+.book-details {
+  flex-grow: 1;
+}
+
+.edit-delete-buttons {
+  display: inline-flex;
+  gap: 15px;
+  padding: 5px 10px;
+  font-size: 14px;
+  margin-left: 90%;
+  border-radius: 25px;
+}
+
+.add-book-link {
+  display: inline-block;
+  padding: 15px 30px;
+  cursor: pointer;
+  background-color: #333;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  margin: 20px auto; 
+  text-decoration: none;
+}
+.add-book-link:hover {
+  text-decoration: none;
+  background-color: #000c1b;
+  color: beige;
+}
+
+.bform{
+    border: 2px solid #ddd;
+      padding: 25px;
+      margin: 20px 20px;
+      background-color: rgba(51, 51, 51, 0.5);
+      border-radius: 20px;
+      width: 700px;
+      margin: 0px 30%;
+}
+
+.notebook {
+  border: 2px solid #ddd;
+  padding: 25px;
+  margin: 20px 20px;
+  background-color: rgba(51, 51, 51, 0.5);
+  border-radius: 20px;
+}
+
+
+a.add-book-link {
+  margin: 2% 44%;
+  background-color: rgba(0, 12, 27, 0.5);
+}
+
+.notes {
+  margin : 30px 20%;
+  padding: 20px;
+  background-color: rgba(51, 51, 51, 0.5);
+  border-radius: 30px;
+}
+
+.notes button{
+  width: 20%;
+  margin: 20px 40%;
+}
+.bform button{
+  width: 20%;
+  margin: 20px 40%;
+}
+
+.notes p{
+  font-weight: bold;
+}
+.notes label{
+  font-weight:bold;
+}
+
+form#searchForm{
+      display: flex;
+      margin: auto;
+      align-items: flex-end;
+      flex-direction: row;
+}
+
+form#searchForm button{
+  width:fit-content;
+  outline: none;
+  margin-left: 10px;
+}
+
+input#searchInput{
+    padding: 0.5em;
+    margin-bottom: 1em;
+    width: 600px;
+}
+
+#searchResults {
+  display:none;
+  border: 2px solid #ddd;
+    padding: 25px;
+    margin: 20px 20px;
+    background-color: rgba(51, 51, 51, 0.7);
+    border-radius: 20px;
+}
+
+.Links{
+      border: 2px solid #ddd;
+      padding: 25px;
+      margin: 20px 20px;
+      background-color: rgba(51, 51, 51, 0.5);
+      border-radius: 20px;
+    }
+
+    .lib{
+      color: beige;
+      margin: 20px  40px;
+    }
+
+.Links h3{
+  margin: 15px;
+}

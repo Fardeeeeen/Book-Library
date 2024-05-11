@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body style="background-image: url('/images/bookhome.avif'); background-size: cover; background-repeat: no-repeat;">
+ <%- include('partials/header') %>
+
+    <div class = main>
+    <div style="text-align: center; margin-top: 10%;">
+        <h1>Welcome to Book Library</h1>
+        <p>Explore your favorite books</p>
+
+        <button onclick="location.href='/books'">Your Books</button>
+        <button onclick="location.href='/searchPage'">Search Books</button> 
+    </div>
+</div>
+<footer>
+<%- include('partials/footer') %>
+</footer>
+
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!-- views/search.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+</head>
+<body>
+
+<%- include('partials/header') %> 
+
+
+    <h3>Search Books</h3>
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Search for books...">
+        <button type="submit">Search</button>
+    </form>
+
+    <div id="searchResults"></div> 
+
+
+<footer>
+<%- include('partials/footer') %>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+<script type="module" src="/js/search.js"></script>
+</body>
+</html>

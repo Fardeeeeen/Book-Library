@@ -10,6 +10,8 @@
 <body>
 <%- include('partials/header') %>
   <h3><%= formTitle %> Book</h3>
+
+  <div class= "bform">
   <form method="POST" action="<%= formAction %>">
     <!-- Include a hidden input for the book ID -->
     <input type="hidden" name="bookId" value="<%= book ? book.id : '' %>">
@@ -25,5 +27,8 @@
 
     <button type="submit">Submit</button>
   </form>
+
+</div>
+
 </body>
 </html>

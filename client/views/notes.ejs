@@ -1,4 +1,4 @@
-<!-- views/notes.ejs -->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +11,16 @@
 <%- include('partials/header') %>
 
   <h3>Book Notes</h3>
+
+  <div class = notes>
   <p>Title: <%= book.title %></p>
   <p>Author: <%= book.author %></p>
   <p>Rating: <%= book.rating %></p>
   <p>Summary: <%= book.summary %></p>
   <p>Notes: <%= book.notes %></p>
-  
 
-  
   <form method="POST" action="/books/notes/<%= book.id %>">
-  <input type="hidden" name="bookId" value="<%= book.id %>">
+    <input type="hidden" name="bookId" value="<%= book.id %>">
 
     <label for="summary">Summary:</label>
     <textarea id="summary" name="summary"><%= book.summary %></textarea>
@@ -30,5 +30,16 @@
 
     <button type="submit">Save Notes</button>
   </form>
+  </div>
+
+<script src=https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.min.js></script>
+<script type="module" src="/bookUtils.js"></script>
+<script type="module" src="/js/bookForm.js"></script>
+
+<footer>
+<%- include('partials/footer') %>
+</footer>
+
 </body>
+
 </html>
