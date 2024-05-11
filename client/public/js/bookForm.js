@@ -1,3 +1,5 @@
+/* This JavaScript code is responsible for updating the cover image, book title, and ISBN for each book
+item on a webpage. Here's a breakdown of what the code does: */
 //bookForm.js//
 
 import { searchBookAndFetchCover } from './bookUtils.js';

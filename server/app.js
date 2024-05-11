@@ -8,8 +8,8 @@ import methodOverride from 'method-override';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const viewsPath = path.join(__dirname, '..', 'Client', 'Views');
-const publicPath = path.join(__dirname, '..', 'Client', 'public');
+const viewsPath = path.join(__dirname, '..', 'client', 'views');
+const publicPath = path.join(__dirname, '..', 'client', 'public');
 
 const app = express();
 const PORT = process.env.PORT || 3000;

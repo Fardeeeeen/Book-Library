@@ -15,10 +15,10 @@ body {
 
 header {
   background: hsla(205, 46%, 10%, 1);
-    background: linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
-    background: -moz-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1);
+  background: linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1);
 
   color: white;
   padding: 1em;
@@ -28,14 +28,14 @@ header {
 
 footer {
   background: hsla(205, 46%, 10%, 1);
-    background: linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
-    background: -moz-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
-    background: -webkit-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1);
+  background: linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+  background: -moz-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+  background: -webkit-linear-gradient(90deg, hsla(205, 46%, 10%, 1) 0%, hsla(191, 28%, 23%, 1) 50%, hsla(207, 41%, 27%, 1) 100%);
+  filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#0E1C26", endColorstr="#2A454B", GradientType=1);
   color: white;
   text-align: center;
   margin-top: auto;
-  height:100px
+  height: 100px
 }
 
 nav {
@@ -61,7 +61,7 @@ ul {
   padding: 0;
 }
 
-p{
+p {
   margin-left: 15px;
   color: beige;
   font-weight: bold;
@@ -110,17 +110,17 @@ button:hover {
   max-width: 100%;
 }
 
-.main{
-   height:100% ;
+.main {
+  height: 100%;
 }
 
-.main h1{
+.main h1 {
   font-size: 3rem;
   font-weight: bold;
-  color:#000c1b
+  color: #000c1b
 }
 
-.main p{
+.main p {
   font-size: 1.5rem;
   color: #000c1b
 }
@@ -130,9 +130,9 @@ h1 {
 }
 
 
-h3{
-  color:beige;
-    margin: 30px 50px 10px 50px;
+h3 {
+  color: beige;
+  margin: 30px 50px 10px 50px;
 }
 
 a:hover {
@@ -141,7 +141,7 @@ a:hover {
 }
 
 a.nav-link:hover {
-color: #065ba0;
+  color: #065ba0;
 }
 
 a.nav-link {
@@ -150,7 +150,7 @@ a.nav-link {
 
 a {
   color: #d4ebffcb;
-  font-weight:800;
+  font-weight: 800;
 }
 
 .book-item {
@@ -162,14 +162,14 @@ a {
   align-items: center;
   background-color: rgba(51, 51, 51, 0.5);
   border-radius: 30px;
-  
+
 }
 
 .cover {
   max-width: 200px;
   max-height: 300px;
   margin-right: 20px;
-  float: left; 
+  float: left;
 }
 
 .book-details {
@@ -193,23 +193,24 @@ a {
   color: white;
   padding: 10px 15px;
   text-align: center;
-  margin: 20px auto; 
+  margin: 20px auto;
   text-decoration: none;
 }
+
 .add-book-link:hover {
   text-decoration: none;
   background-color: #000c1b;
   color: beige;
 }
 
-.bform{
-    border: 2px solid #ddd;
-      padding: 25px;
-      margin: 20px 20px;
-      background-color: rgba(51, 51, 51, 0.5);
-      border-radius: 20px;
-      width: 700px;
-      margin: 0px 30%;
+.bform {
+  border: 2px solid #ddd;
+  padding: 25px;
+  margin: 20px 20px;
+  background-color: rgba(51, 51, 51, 0.5);
+  border-radius: 20px;
+  width: 700px;
+  margin: 0px 30%;
 }
 
 .notebook {
@@ -227,69 +228,71 @@ a.add-book-link {
 }
 
 .notes {
-  margin : 30px 20%;
+  margin: 30px 20%;
   padding: 20px;
   background-color: rgba(51, 51, 51, 0.5);
   border-radius: 30px;
 }
 
-.notes button{
-  width: 20%;
-  margin: 20px 40%;
-}
-.bform button{
+.notes button {
   width: 20%;
   margin: 20px 40%;
 }
 
-.notes p{
+.bform button {
+  width: 20%;
+  margin: 20px 40%;
+}
+
+.notes p {
   font-weight: bold;
 }
-.notes label{
-  font-weight:bold;
+
+.notes label {
+  font-weight: bold;
 }
 
-form#searchForm{
-      display: flex;
-      margin: auto;
-      align-items: flex-end;
-      flex-direction: row;
+form#searchForm {
+  display: flex;
+  margin: auto;
+  align-items: flex-end;
+  flex-direction: row;
 }
 
-form#searchForm button{
-  width:fit-content;
+form#searchForm button {
+  width: fit-content;
   outline: none;
   margin-left: 10px;
 }
 
-input#searchInput{
-    padding: 0.5em;
-    margin-bottom: 1em;
-    width: 600px;
+input#searchInput {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  width: 600px;
 }
 
 #searchResults {
-  display:none;
+  display: none;
   border: 2px solid #ddd;
-    padding: 25px;
-    margin: 20px 20px;
-    background-color: rgba(51, 51, 51, 0.7);
-    border-radius: 20px;
+  padding: 25px;
+  margin: 20px 20px;
+  background-color: rgba(51, 51, 51, 0.7);
+  border-radius: 20px;
 }
 
-.Links{
-      border: 2px solid #ddd;
-      padding: 25px;
-      margin: 20px 20px;
-      background-color: rgba(51, 51, 51, 0.5);
-      border-radius: 20px;
-    }
+.Links {
+  border: 2px solid #ddd;
+  padding: 25px;
+  margin: 20px 20px;
+  background-color: rgba(51, 51, 51, 0.5);
+  border-radius: 20px;
+}
 
-    .lib{
-      color: beige;
-      margin: 20px  40px;
-    }
+.lib {
+  color: beige;
+  margin: 20px 40px;
+}
 
-.Links h3{
+.Links h3 {
   margin: 15px;
 }
