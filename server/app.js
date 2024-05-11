@@ -25,7 +25,7 @@ app.use('/books', booksRouter);
 app.use('/api', apiRouter);
 
 // Serve bookUtils.js using express.static
-app.use('/bookUtils.js', express.static(path.join(__dirname, '..', 'Client', 'public', 'bookUtils.js')));
+app.use('/bookUtils.js', express.static(path.join(__dirname, '..', 'client', 'public', 'bookUtils.js')));
 
 app.get('/', (req,res) => {
   res.render('index.ejs');

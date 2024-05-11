@@ -59,4 +59,4 @@ sequelize.sync()
     console.error('Error synchronizing database:', error);
   });
 
-export default sequelize;
+export default Book;
