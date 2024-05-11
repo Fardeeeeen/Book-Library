@@ -1,27 +1,62 @@
-// database.js
 import dotenv from "dotenv";
-import pkg from 'pg';
+import Sequelize from 'sequelize';
 
 dotenv.config();
-const { Client } = pkg;
 
-const db = new Client({
-    user: process.env.PG_USER,
-    host: process.env.PG_HOST,
-    database: process.env.PG_DATABASE,
-    password: process.env.PG_PASSWORD,
-    port: process.env.PG_PORT,
+let sequelize;
+
+if (process.env.DB_URL) {
+  sequelize = new Sequelize(process.env.DB_URL, {
+    dialect: 'postgres',
+    dialectOptions: {
+      ssl: process.env.NODE_ENV === 'production', // Enable SSL for production environment
+    },
+  });
+} else {
+  console.error("DB_URL is not available. Please check your environment configuration.");
+  process.exit(1); 
+}
+
+// Define the Book model
+const Book = sequelize.define('book', {
+  id: {
+    type: Sequelize.INTEGER,
+    primaryKey: true,
+    autoIncrement: true
+  },
+  title: {
+    type: Sequelize.STRING(255),
+    allowNull: false
+  },
+  author: {
+    type: Sequelize.STRING(255),
+    allowNull: false
+  },
+  rating: {
+    type: Sequelize.INTEGER,
+    allowNull: true
+  },
+  summary: {
+    type: Sequelize.TEXT,
+    allowNull: true
+  },
+  notes: {
+    type: Sequelize.TEXT,
+    allowNull: true
+  },
+  isbn: {
+    type: Sequelize.STRING(255),
+    allowNull: true
+  }
 });
 
-const initializeDatabase = async () => {
-  try {
-    await db.connect();
-    console.log('Connected to PostgreSQL database');
-  } catch (error) {
-    console.error('Error connecting to PostgreSQL:', error);
-  }
-};
+// Sync the Sequelize model with the database
+sequelize.sync()
+  .then(() => {
+    console.log('Database synchronized successfully');
+  })
+  .catch(error => {
+    console.error('Error synchronizing database:', error);
+  });
 
-initializeDatabase();
-
-export default db;
+export default sequelize;

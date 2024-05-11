@@ -1,5 +1,5 @@
 import express from 'express';
-import db from '../database.js';
+import Book from '../database.js';
 import axios from 'axios';
 import { searchBookAndFetchCover } from '../../client/public/js/bookUtils.js';
 
@@ -11,8 +11,7 @@ router.use(express.json());
 
 router.get('/', async (req, res) => {
   try {
-    const result = await db.query('SELECT * FROM books ORDER BY id ASC');
-    const books = result.rows;
+    const books = await Book.findAll({ order: [['id', 'ASC']] });
 
     // Iterate through books and fetch cover image URLs
     for (const book of books) {
@@ -59,8 +58,7 @@ router.get('/add', (req, res) => {
 router.get('/edit/:id', async (req, res) => {
   const bookId = req.params.id;
   try {
-    const result = await db.query('SELECT * FROM books WHERE id = $1', [bookId]);
-    const book = result.rows[0];
+    const book = await Book.findByPk(bookId);
     if (book) {
       res.render('book-form', { formTitle: 'Edit', formAction: `/books/edit/${bookId}`, book });
     } else {
@@ -76,8 +74,7 @@ router.get('/notes/:id', async (req, res) => {
   const bookId = req.params.id;
 
   try {
-    const result = await db.query('SELECT * FROM books WHERE id = $1', [bookId]);
-    const book = result.rows[0];
+    const book = await Book.findByPk(bookId);
 
     if (book) {
       const isbn = book.isbn;
@@ -94,15 +91,13 @@ router.get('/notes/:id', async (req, res) => {
 
 router.get('/notebook', async (req, res) => {
   try {
-    const result = await db.query(`SELECT title, notes FROM books ORDER BY id ASC`);
-    const notes = result.rows;
+    const notes = await Book.findAll({ attributes: ['title', 'notes'], order: [['id', 'ASC']] });
     res.render('notebook', { notes });
   } catch (error) {
     console.error(error);
     res.status(500).render('error', { message: 'Internal Server Error' });
   }
 });
-
 
 router.post('/searchPage', async (req, res) => {
   let title = req.body.title;
@@ -125,7 +120,7 @@ router.post('/notes/:bookId', async (req, res) => {
   }
 
   try {
-    const result = await db.query('UPDATE books SET summary = $1, notes = $2 WHERE id = $3', [summary, notes, bookId]);
+    await Book.update({ summary, notes }, { where: { id: bookId } });
     res.redirect(`/books/notes/${bookId}`);
   } catch (error) {
     console.error(error);
